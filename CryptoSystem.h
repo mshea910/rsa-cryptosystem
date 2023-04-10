@@ -8,7 +8,19 @@
 
 
 class CryptoSystem {
+public:
+    CryptoSystem(int primeA, int primeB);
 
+private:
+    int p;
+    int q;
+    int n;
+    int Tn;
+    int e;
+    int d;
+    int m;
+    int mP;
+    int c;
 };
 
 
