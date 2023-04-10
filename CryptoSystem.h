@@ -10,18 +10,21 @@
 
 class CryptoSystem {
 public:
+    // Initializer
     CryptoSystem(int primeA, int primeB);
 
     // Public Setters
     void setEValue(int num);
     void setMValue(int num);
 
+    // Public Methods
     void printList();
     void printAllVariables();
     bool checkEValue(int num);
     bool checkMValue(int num);
 
 private:
+    // Private Class Variables
     int p;
     int q;
     int n;
@@ -32,8 +35,10 @@ private:
     int mP;
     int c;
 
+    // Vector of Ints
     std::vector<int> eList;
 
+    // Computation Functions and Sub-Functions
     void computeN();
     void computeTn();
     void computeEValues();
