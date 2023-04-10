@@ -2,7 +2,7 @@
 // Created by Michael Shea on 4/10/23.
 #include "CryptoSystem.h"
 
-int main(void) {
+int main() {
     int p;
     int q;
 
