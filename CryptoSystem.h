@@ -14,9 +14,11 @@ public:
 
     // Public Setters
     void setEValue(int num);
+    void setMValue(int num);
 
     void printList();
     bool checkEValue(int num);
+    bool checkMValue(int num);
 
 private:
     int p;
