@@ -90,8 +90,13 @@ bool CryptoSystem::checkMValue(int num) {
 void CryptoSystem::setMValue(int num) {
     this->m = num;
     computeC();
+    computemP();
 }
 
 void CryptoSystem::computeC() {
     this->c = int(pow(this->m, this->e)) % this->n;
+}
+
+void CryptoSystem::computemP() {
+    this->mP = int(pow(this->c, this->d)) % this-> n;
 }

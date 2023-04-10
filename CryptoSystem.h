@@ -38,6 +38,7 @@ private:
     void computeEValues();
     void computeD();
     void computeC();
+    void computemP();
     int gcd(int n1, int n2);
 };
 
