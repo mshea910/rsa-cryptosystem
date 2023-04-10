@@ -21,6 +21,9 @@ private:
     int m;
     int mP;
     int c;
+
+    void computeN();
+    void computeTn();
 };
 
 
