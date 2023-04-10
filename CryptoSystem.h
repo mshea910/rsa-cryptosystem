@@ -40,6 +40,7 @@ private:
     void computeD();
     void computeC();
     void computemP();
+    int fastModExp(int a, int b, int n);
     int gcd(int n1, int n2);
 };
 

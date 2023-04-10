@@ -93,12 +93,29 @@ void CryptoSystem::setMValue(int num) {
     computemP();
 }
 
+int CryptoSystem::fastModExp(int a, int b, int n) {
+    int x, prod;
+
+    prod = 1;
+    x = a % n;
+
+    while(b > 0) {
+        if((b % 2) > 0) {
+            prod = (prod * x) % n;
+        }
+        x = (x * x) % n;
+        b = floor(b/2);
+    }
+
+    return prod;
+}
+
 void CryptoSystem::computeC() {
-    this->c = int(pow(this->m, this->e)) % this->n;
+    this->c = fastModExp(this->m, this->e, this->n);
 }
 
 void CryptoSystem::computemP() {
-    this->mP = int(pow(this->c, this->d)) % this-> n;
+    this->mP = fastModExp(this->c, this->d, this->n);
 }
 
 void CryptoSystem::printAllVariables() {
