@@ -100,3 +100,15 @@ void CryptoSystem::computeC() {
 void CryptoSystem::computemP() {
     this->mP = int(pow(this->c, this->d)) % this-> n;
 }
+
+void CryptoSystem::printAllVariables() {
+    std::cout << "\t p: " << this->p << std::endl;
+    std::cout << "\t q: " << this->q << std::endl;
+    std::cout << "\t n: " << this->n << std::endl;
+    std::cout << "\t T(n): " << this->Tn << std::endl;
+    std::cout << "\t e: " << this->e << std::endl;
+    std::cout << "\t d: " << this->d << std::endl;
+    std::cout << "\t m: " << this->m << std::endl;
+    std::cout << "\t c: " << this->c << std::endl;
+    std::cout << "\t m': " << this->mP << std::endl;
+}

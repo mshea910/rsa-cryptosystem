@@ -17,6 +17,7 @@ public:
     void setMValue(int num);
 
     void printList();
+    void printAllVariables();
     bool checkEValue(int num);
     bool checkMValue(int num);
 

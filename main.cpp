@@ -44,6 +44,7 @@ int main() {
 
     mySys->setMValue(m);
 
-    std::cout << "Perfect! Here is the final readout of all variables: "
+    std::cout << "\n\nPerfect! Here is the final readout of all variables: " << std::endl;
+    mySys->printAllVariables();
 }
 //
