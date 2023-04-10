@@ -41,3 +41,17 @@ int CryptoSystem::gcd(int n1, int n2) {
 
     return num;
 }
+
+void CryptoSystem::printList() {
+    std::cout << "(";
+
+    for(int i : this->eList){
+        if(i == this->eList.size() - 1){
+            std::cout << i << ")";
+        } else {
+            std::cout << i << ", ";
+        }
+    }
+
+    std::cout << std::endl;
+}

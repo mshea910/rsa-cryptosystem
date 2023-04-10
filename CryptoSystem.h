@@ -12,6 +12,8 @@ class CryptoSystem {
 public:
     CryptoSystem(int primeA, int primeB);
 
+    void printList();
+
 private:
     int p;
     int q;
