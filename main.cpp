@@ -2,6 +2,13 @@
 // Created by Michael Shea on 4/10/23.
 #include "CryptoSystem.h"
 
+bool checkPrime(int num){
+    if(num % 2 == 0) {
+        return false;
+    }
+    return true;
+}
+
 int main() {
     int p, q, m, e = 0;
     bool err = false;
@@ -9,10 +16,22 @@ int main() {
     std::cout << "\t~~ Welcome to the RSA CryptoSystem v1.0.0 ~~" << std::endl;
     std::cout << "\nPlease enter your first Prime Number: ";
     std::cin >> p;
-    // Need to add Prime Number checking
+    err = checkPrime(p);
+    while(!err){
+        std::cout << "\n\nI'm sorry, it seems you've entered a non-prime number." << std::endl;
+        std::cout << "\nPlease enter your first Prime Number: ";
+        std::cin >> p;
+        err = checkPrime(p);
+    }
     std::cout << std::endl << "\nPlease enter your second Prime Number: ";
     std::cin >> q;
-    // Need to add Prime Number checking
+    err = checkPrime(q);
+    while(!err){
+        std::cout << "\n\nI'm sorry, it seems you've entered a non-prime number." << std::endl;
+        std::cout << "\nPlease enter your second Prime Number: ";
+        std::cin >> q;
+        err = checkPrime(q);
+    }
 
     auto * mySys = new CryptoSystem(p, q);
 
