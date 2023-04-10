@@ -80,7 +80,7 @@ void CryptoSystem::computeD() {
 }
 
 bool CryptoSystem::checkMValue(int num) {
-    if(num < this->n && num >= 0 && isdigit(num)){
+    if(num < this->n && num >= 0){
         return true;
     }
 
