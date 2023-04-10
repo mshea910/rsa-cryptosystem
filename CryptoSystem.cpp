@@ -26,7 +26,7 @@ void CryptoSystem::computeEValues() {
     for(int i = 1; i <= this->Tn; i++){
         val = gcd(i, this->Tn);
         if(val == 1){
-            this->eList.push_back(val);
+            this->eList.push_back(i);
         }
     }
 }
@@ -45,11 +45,11 @@ int CryptoSystem::gcd(int n1, int n2) {
 void CryptoSystem::printList() {
     std::cout << "(";
 
-    for(int i : this->eList){
+    for(int i = 0; i < this->eList.size(); i++){
         if(i == this->eList.size() - 1){
-            std::cout << i << ")";
+            std::cout << eList[i] << ")";
         } else {
-            std::cout << i << ", ";
+            std::cout << eList[i] << ", ";
         }
     }
 
