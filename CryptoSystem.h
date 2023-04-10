@@ -5,6 +5,7 @@
 #ifndef RSA_CRYPTOSYSTEM_CRYPTOSYSTEM_H
 #define RSA_CRYPTOSYSTEM_CRYPTOSYSTEM_H
 #include <iostream>
+#include <vector>
 
 
 class CryptoSystem {
@@ -22,8 +23,12 @@ private:
     int mP;
     int c;
 
+    std::vector<int> eList;
+
     void computeN();
     void computeTn();
+    void computeEValues();
+    int gcd(int n1, int n2);
 };
 
 

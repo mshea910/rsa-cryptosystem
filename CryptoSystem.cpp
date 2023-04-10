@@ -10,6 +10,7 @@ CryptoSystem::CryptoSystem(int primeA, int primeB) {
 
     computeN();
     computeTn();
+    computeEValues();
 }
 
 void CryptoSystem::computeN() {
@@ -18,4 +19,25 @@ void CryptoSystem::computeN() {
 
 void CryptoSystem::computeTn() {
     this->Tn = (this->p - 1) * (this->q - 1);
+}
+
+void CryptoSystem::computeEValues() {
+    int val;
+    for(int i = 1; i <= this->Tn; i++){
+        val = gcd(i, this->Tn);
+        if(val == 1){
+            this->eList.push_back(val);
+        }
+    }
+}
+
+int CryptoSystem::gcd(int n1, int n2) {
+    int num = 0;
+    for(int i = 1; i <= n2; i++){
+        if(n1 % i == 0 && n2 % i == 0){
+            num = i;
+        }
+    }
+
+    return num;
 }
