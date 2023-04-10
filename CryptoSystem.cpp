@@ -69,9 +69,9 @@ void CryptoSystem::printList() {
 // Verify num is in eList Vector and Return Bool Accordingly
 bool CryptoSystem::checkEValue(int num) {
     for(int i : this->eList){
-        if(num == eList[i]){
+        if(num == i){
             return true;
-        } else if(i == this->eList.size() - 1){
+        } else if(i == this->eList.back()){
             return false;
         }
     }
