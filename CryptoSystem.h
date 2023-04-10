@@ -12,7 +12,11 @@ class CryptoSystem {
 public:
     CryptoSystem(int primeA, int primeB);
 
+    // Public Setters
+    void setEValue(int num){this->e = num;};
+
     void printList();
+    bool checkEValue(int num);
 
 private:
     int p;

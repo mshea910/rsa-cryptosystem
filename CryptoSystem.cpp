@@ -55,3 +55,13 @@ void CryptoSystem::printList() {
 
     std::cout << std::endl;
 }
+
+bool CryptoSystem::checkEValue(int num) {
+    for(int i : this->eList){
+        if(num == eList[i]){
+            return true;
+        } else if(i == this->eList.size() - 1){
+            return false;
+        }
+    }
+}
