@@ -8,6 +8,7 @@ This project is a recreation of the RSA Cryptosystem that fits the confines of a
 
 ### Tasks List
 - Allow user to enter two prime numbers
+- Handle errors (non-prime numbers given)
 - Compute n = p * q
 - Compute T(n) = (p-1) * (q-1)
 - Calculate and present all possible e values such that GCD(e, T(n)) = 1
