@@ -65,3 +65,16 @@ bool CryptoSystem::checkEValue(int num) {
         }
     }
 }
+
+void CryptoSystem::setEValue(int num) {
+    this->e = num;
+    computeD();
+}
+
+void CryptoSystem::computeD() {
+    for(int i = 1; i < this->Tn ; i++){
+        if((i*this->e) % this->Tn == 1){
+            this->d = i;
+        }
+    }
+}

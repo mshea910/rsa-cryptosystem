@@ -13,7 +13,7 @@ public:
     CryptoSystem(int primeA, int primeB);
 
     // Public Setters
-    void setEValue(int num){this->e = num;};
+    void setEValue(int num);
 
     void printList();
     bool checkEValue(int num);
@@ -34,6 +34,7 @@ private:
     void computeN();
     void computeTn();
     void computeEValues();
+    void computeD();
     int gcd(int n1, int n2);
 };
 
